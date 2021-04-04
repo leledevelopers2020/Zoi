@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "375645096940",
+    "firebase_url": "https://zoi-app-delivery.firebaseio.com",
+    "project_id": "zoi-app-delivery",
+    "storage_bucket": "zoi-app-delivery.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375645096940:android:9781dc7ef0bdec9d2d4ec9",
+        "android_client_info": {
+          "package_name": "com.zoiapp.zoi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375645096940-ri4lk8mlu42voqnit40fmkdvbfoviq93.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4Hhfrno8G7R41D5dDvklyRDgx3FpFwZI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "375645096940-ri4lk8mlu42voqnit40fmkdvbfoviq93.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

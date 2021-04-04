@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/historyCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:contentPadding="0dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/typeOfDeliveryHistory"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:padding="10dp"
+                app:srcCompat="@drawable/ic_local_phone_black_24dp"
+                android:background="@android:color/holo_orange_light"/>
+
+            <TextView
+                android:id="@+id/orderNumHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order#20200730"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@id/typeOfDeliveryHistory"
+                android:layout_toRightOf="@id/typeOfDeliveryHistory"
+                android:layout_marginLeft="8dp"/>
+
+
+           <!-- <TextView
+                android:id="@+id/orderitemCountHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View 3 items"
+                android:layout_alignParentRight="true"
+                android:textSize="20sp"
+                android:layout_marginRight="10dp"
+                android:textColor="@android:color/holo_orange_dark"
+                />-->
+            <TextView
+                android:id="@+id/orderStatusHistroy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/orderNumHistory"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="19dp"
+                android:layout_toEndOf="@id/typeOfDeliveryHistory"
+                android:layout_toRightOf="@id/typeOfDeliveryHistory"
+                android:text="Pending"
+                android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/orderNumHistory"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="19dp"
+            >
+            <TextView
+                android:id="@+id/dateHistroy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="30/06/2020" />
+
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@android:color/background_dark" />
+
+            <TextView
+                android:id="@+id/timeHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10:39am" />
+        </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

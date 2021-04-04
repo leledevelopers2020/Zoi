@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".UserRequired.Register">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/rgrtl1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/architects_daughter"
+                android:gravity="center"
+                android:text="OTP VERIFICATION"
+                android:textColor="#334191"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/mobilenumberlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/title">
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_toStartOf="@+id/phone"
+                    app:ccp_textSize="16sp"
+                    app:ccp_contentColor="@android:color/black"
+                    app:ccp_flagBorderColor="@android:color/white" />
+
+                <EditText
+                    android:id="@+id/phone"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title"
+                    android:background="@drawable/register_edit_text_background"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="95dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="21dp"
+                    android:ems="10"
+                    android:padding="8dp"
+                    android:textAlignment="center"
+                    android:hint="Mobile Number"
+                    android:inputType="phone"
+                    android:textColorHint="@android:color/tab_indicator_text"
+                    android:textSize="20sp">
+
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_marginTop="2dp"
+                android:layout_below="@+id/mobilenumberlayout">
+                <TextView
+                    android:id="@+id/editdes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Is this not your number?"
+                    android:textStyle="italic"
+                    android:visibility="invisible"/>
+                <TextView
+                    android:id="@+id/editPhnNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/transparent"
+                    android:text="Edit"
+                    android:layout_marginStart="4dp"
+                    android:textAllCaps="false"
+                    android:textColor="#00BCD4"
+                    android:visibility="invisible"
+                    />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rtl5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mobilenumberlayout"
+                android:layout_marginTop="20dp"
+                android:padding="20dp">
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:background="@drawable/progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:visibility="invisible"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/progressBar"
+                    android:text="Sending OTP.."
+                    android:visibility="invisible"
+                    android:padding="10dp"
+                    android:textColor="#333232"
+                    android:textSize="25sp" />
+
+                <com.goodiebag.pinview.Pinview
+                    android:id="@+id/pinview2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:pinWidth="40dp"
+                    app:pinHeight="40dp"
+                    app:splitWidth="8dp"
+                    app:pinLength="6"
+                    app:cursorVisible="false"
+                    app:forceKeyboard="true"
+                    android:visibility="invisible"
+                    app:inputType="number"
+                    app:password="false"/>
+
+                <EditText
+                    android:id="@+id/codeEnter"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginEnd="17dp"
+                    android:background="@drawable/register_edit_text_background"
+                    android:hint="Enter OTP.."
+                    android:padding="10dp"
+                    android:textColor="@android:color/primary_text_light_nodisable"
+                    android:textColorHint="@android:color/tab_indicator_text"
+                    android:textSize="24sp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/countdowntv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:text="00:00"
+                android:textSize="30dp"
+                android:visibility="invisible"
+                android:layout_below="@+id/rtl5"
+                android:layout_centerHorizontal="true"/>
+            <Button
+                android:id="@+id/nextBtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_below="@+id/countdowntv"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/actionbarcolor_btn"
+                android:text="NEXT"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/resend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resend OTP"
+                android:textColor="#00BCD4"
+                android:layout_below="@+id/rtl5"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"/>
+            <TextView
+                android:id="@+id/des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nextBtn"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="2dp"
+                android:gravity="center"
+                android:text="REGISTER WITH PHONE NUMBER AND ENTER YOUR OTP TO CREATE YOUR ACCOUNT\n or \nLOGIN WITH THE REGISTER MOBILE AND ENTER YOUR OTP TO LOGIN"
+                android:textColor="#040F4C"
+                android:textSize="10dp"
+                android:textStyle="italic" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+

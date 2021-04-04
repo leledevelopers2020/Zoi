@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ZOI</string>
+    <string name="navigationdrawer_open">open</string>
+    <string name="navigationdrawer_close">close</string>
+    <string name="title_activity_note_details">NoteDetails</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+</resources>

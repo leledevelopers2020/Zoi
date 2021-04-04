@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zoiapp.zoi">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/appicon1"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/appicon1_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+
+            android:name=".UserRequired.Intro"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UserRequired.Register"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".UserRequired.AddDetails"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".MainHomePage.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".Cam_Gal_Phn.Camera"
+            android:label="Camera"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".Cam_Gal_Phn.PhoneCalls"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".Cam_Gal_Phn.Gallery"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".Mart.ShopHomePage"
+            android:screenOrientation="portrait"
+            android:label="Mart">
+
+        </activity>
+        <activity
+            android:name=".Mart.Cart"
+            android:screenOrientation="portrait"
+            android:label="Cart">
+
+        </activity>
+        <activity
+            android:name=".Mart.ShoppingItemDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".Notes.NoteTaking"
+            android:screenOrientation="portrait"
+            android:label="Notes">
+
+        </activity>
+        <activity
+            android:name=".Notes.NoteDetails"
+            android:label="Note Details"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".Notes.EditNote"
+            android:screenOrientation="portrait"
+            android:label="Notes">
+
+        </activity>
+        <activity
+            android:name=".History.History"
+            android:screenOrientation="portrait"
+            android:label="History">
+
+        </activity>
+        <activity
+            android:name=".History.HistoryOrderDetails"
+            android:screenOrientation="portrait"
+            android:label="History">
+
+        </activity>
+        <activity
+            android:name=".History.ReturnOrder"
+            android:screenOrientation="portrait"
+            android:label="History">
+
+        </activity>
+        <activity
+            android:name=".UserRequired.Summary"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Summary">
+
+        </activity>
+        <activity
+            android:name=".Drawer.Profile"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".Drawer.NavigationDrawer"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".UserGuide.Guide"
+            android:screenOrientation="portrait"
+            android:label="Guide">
+
+        </activity>
+        <activity
+            android:name=".UserRequired.UserAddress"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".Notifications.NotificationPage"
+            android:screenOrientation="portrait"
+            android:label="Notifications">
+
+        </activity>
+
+
+
+
+
+
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.zoiapp.zoi.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service android:name=".Notifications.FireMsgService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts">
+
+        </meta-data>
+    </application>
+
+</manifest>

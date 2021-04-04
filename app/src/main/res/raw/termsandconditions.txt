@@ -1,0 +1,11 @@
+Terms & Conditions
+
+ZOI ensures the confidentiality of your personal details shared with us.
+ZOI  requires a good internet connection(continuously) to run this application.
+ZOI stores your order history of the past 15 days.
+ZOI allows you to return your order until 24 hours after the product has been ordered.
+ZOI asks you to completely refer to the user guide to understand the way of usage of the application.
+ZOI will ensure the  delivery address(town,state) matching your profile address(town,state).
+ZOI will only display the offers in your home page according to your mart location.
+ZOI allows you 5 continuous logouts  of the same account in a single day. After that your account will demand a rest period and you will be unable to login with the same account.
+Changes made in your town value would also effect cart and profile.

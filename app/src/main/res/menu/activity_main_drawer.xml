@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_profile"
+            android:title="Profile" />
+
+        <item android:id="@+id/nav_logout"
+            android:title="Logout"/>
+
+    </group>
+    <item android:title="Company Details">
+        <menu>
+            <group android:checkableBehavior="none">
+                <item
+                    android:id="@+id/nav_about_us"
+                    android:title="About us" />
+                <item
+                    android:id="@+id/nav_privacy_policy"
+                    android:title="Privacy Policy" />
+                <item
+                    android:id="@+id/nav_tandc"
+                    android:title="Terms and Conditions" />
+                <item
+                    android:id="@+id/nav_feedback"
+                    android:title="Feedback" />
+                <item
+                    android:id="@+id/nav_rate_us"
+                    android:title="Rate Us" />
+
+            </group>
+        </menu>
+    </item>
+</menu>

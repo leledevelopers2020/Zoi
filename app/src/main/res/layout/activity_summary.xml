@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/summary"
+    tools:context=".UserRequired.Summary">
+
+    <TextView
+        android:id="@+id/summaryTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Your Last Ordered Bill Will Be Shown Here"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/summarylayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+    <ScrollView
+        android:id="@+id/summaryPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:background="@drawable/border_side">
+
+                <TextView
+                    android:id="@+id/item_sno"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="S.No"
+                    android:textSize="18dp"
+                    android:textColor="#673AB7"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/item_names"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:text="ITEM TITLE"
+                    android:textColor="#673AB7"
+                    android:textSize="18dp"
+                    android:textStyle="" />
+
+                <TextView
+                    android:id="@+id/item_quantity"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="QUANTIY"
+                    android:textColor="#673AB7"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/item_prize"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.75"
+                    android:gravity="center"
+                    android:text="PRICE"
+                    android:textColor="#673AB7"
+                    android:textSize="18dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/layout1">
+
+                <TextView
+                    android:id="@+id/items_sno_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/items_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:gravity="left"
+                    android:text="No Orders"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/quantity_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="left"
+                    android:textColor="@android:color/black"
+                    android:text="0"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/prize_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.15"
+                    android:gravity="left"
+                    android:textColor="@android:color/black"
+                    android:text="0.00"
+                    android:textSize="20dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/layout2"
+                android:orientation="horizontal"
+                android:background="@drawable/border_side">
+
+                <TextView
+                    android:id="@+id/Total"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/chonburi"
+                    android:gravity="center"
+                    android:text="TOTAL PRIZE:"
+                    android:textColor="#24AE0B"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/total_prize"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/chonburi"
+                    android:gravity="center"
+                    android:text="र0000000"
+                    android:textColor="#EC1C1C"
+                    android:textSize="20dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout4"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/layout3"
+                android:orientation="horizontal"
+                android:background="@drawable/border_side">
+
+                <TextView
+                    android:id="@+id/discount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/chonburi"
+                    android:gravity="center"
+                    android:text="TOTAL DISCOUNT:"
+                    android:textColor="#1BA620"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/discount_prize"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/chonburi"
+                    android:gravity="center"
+                    android:text="र0000000"
+                    android:textColor="#EC1C1C"
+                    android:textSize="20dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout5"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/layout4"
+                android:orientation="horizontal"
+                android:background="@drawable/border_side">
+
+                <TextView
+                    android:id="@+id/finalcost"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/chonburi"
+                    android:gravity="center"
+                    android:text="TOTAL AMOUNT TO BE PAID:"
+                    android:textColor="#1EAC24"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/finalcost_prize"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/chonburi"
+                    android:gravity="center"
+                    android:text="र0000000"
+                    android:textColor="#EC1C1C"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+    </LinearLayout>
+</RelativeLayout>
